@@ -1,14 +1,7 @@
-<mat-card class="section-card">
-  <mat-card-header>
-    <mat-card-title>Committee Reports</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div class="committee-list">
-      <div *ngFor="let report of reports" class="committee-item">
-        <h4 class="committee-name">{{ report.committeeName }}</h4>
-        <p class="reported-by">Reported by: {{ report.reportedBy }}</p>
-        <p class="report-text">{{ report.report }}</p>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
+<div class="committee-list">
+  <div *ngFor="let report of reports" class="committee-item">
+    <h4 class="committee-name">{{ report.committeeName }}</h4>
+    <p class="reported-by">Reported by: {{ report.reportedBy }}</p>
+    <p class="report-text">{{ report.report }}</p>
+  </div>
+</div>

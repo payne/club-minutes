@@ -60,6 +60,15 @@
   display: none;
 }
 
+mat-accordion {
+  display: block;
+  margin-top: 1rem;
+}
+
+mat-expansion-panel {
+  margin-bottom: 0.5rem;
+}
+
 @media print {
   .minutes-app {
     background-color: white;
@@ -102,5 +111,35 @@
 
   @page {
     margin: 0.5in;
+  }
+
+  mat-expansion-panel {
+    box-shadow: none !important;
+    margin-bottom: 1rem;
+  }
+
+  mat-expansion-panel-header {
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  mat-panel-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mat-expansion-panel-content {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+
+  .mat-expansion-indicator {
+    display: none !important;
   }
 }

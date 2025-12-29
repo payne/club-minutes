@@ -231,3 +231,10 @@ please fix.
 
 **Claude response completed at 2025-12-29 07:52:38**
 
+
+### User Prompt (2025-12-29 08:01:05)
+
+Make it so every component may be collapsed or expanded.  Start all components collapsed.
+
+**Claude response completed at 2025-12-29 08:04:23**
+

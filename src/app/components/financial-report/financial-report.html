@@ -1,38 +1,31 @@
-<mat-card class="section-card" *ngIf="financialData">
-  <mat-card-header>
-    <mat-card-title>Financial Report</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <div class="financial-grid">
-      <div class="financial-item">
-        <span class="label">Current Balance:</span>
-        <span class="value">${{ financialData.currentBalance | number:'1.2-2' }}</span>
-      </div>
-      <div class="financial-item">
-        <span class="label">Change Since Last Month:</span>
-        <span class="value" [class.positive]="financialData.changeSinceLastMonth >= 0"
-              [class.negative]="financialData.changeSinceLastMonth < 0">
-          {{ financialData.changeSinceLastMonth >= 0 ? '+' : '' }}${{ financialData.changeSinceLastMonth | number:'1.2-2' }}
-        </span>
-      </div>
-      <div class="financial-item">
-        <span class="label">Change This Year:</span>
-        <span class="value" [class.positive]="financialData.changeThisYear >= 0"
-              [class.negative]="financialData.changeThisYear < 0">
-          {{ financialData.changeThisYear >= 0 ? '+' : '' }}${{ financialData.changeThisYear | number:'1.2-2' }}
-        </span>
-      </div>
-      <div class="financial-item sparkline-container" *ngIf="financialData.balanceHistory && financialData.balanceHistory.length > 0">
-        <span class="label">Balance Trend:</span>
-        <svg class="sparkline" viewBox="0 0 100 30" preserveAspectRatio="none">
-          <polyline
-            [attr.points]="sparklinePoints"
-            fill="none"
-            stroke="#3f51b5"
-            stroke-width="2"
-          />
-        </svg>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
+<div class="financial-grid" *ngIf="financialData">
+  <div class="financial-item">
+    <span class="label">Current Balance:</span>
+    <span class="value">${{ financialData.currentBalance | number:'1.2-2' }}</span>
+  </div>
+  <div class="financial-item">
+    <span class="label">Change Since Last Month:</span>
+    <span class="value" [class.positive]="financialData.changeSinceLastMonth >= 0"
+          [class.negative]="financialData.changeSinceLastMonth < 0">
+      {{ financialData.changeSinceLastMonth >= 0 ? '+' : '' }}${{ financialData.changeSinceLastMonth | number:'1.2-2' }}
+    </span>
+  </div>
+  <div class="financial-item">
+    <span class="label">Change This Year:</span>
+    <span class="value" [class.positive]="financialData.changeThisYear >= 0"
+          [class.negative]="financialData.changeThisYear < 0">
+      {{ financialData.changeThisYear >= 0 ? '+' : '' }}${{ financialData.changeThisYear | number:'1.2-2' }}
+    </span>
+  </div>
+  <div class="financial-item sparkline-container" *ngIf="financialData.balanceHistory && financialData.balanceHistory.length > 0">
+    <span class="label">Balance Trend:</span>
+    <svg class="sparkline" viewBox="0 0 100 30" preserveAspectRatio="none">
+      <polyline
+        [attr.points]="sparklinePoints"
+        fill="none"
+        stroke="#3f51b5"
+        stroke-width="2"
+      />
+    </svg>
+  </div>
+</div>
