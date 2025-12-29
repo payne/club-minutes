@@ -90,63 +90,63 @@
       </div>
 
       <mat-accordion>
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('attendance')" (opened)="onPanelToggle('attendance', true)" (closed)="onPanelToggle('attendance', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Attendance</mat-panel-title>
           </mat-expansion-panel-header>
           <app-attendance [attendees]="minutes.attendees"></app-attendance>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('financial')" (opened)="onPanelToggle('financial', true)" (closed)="onPanelToggle('financial', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Financial Report</mat-panel-title>
           </mat-expansion-panel-header>
           <app-financial-report [financialData]="minutes.financialReport"></app-financial-report>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('approval')" (opened)="onPanelToggle('approval', true)" (closed)="onPanelToggle('approval', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Minutes Approval</mat-panel-title>
           </mat-expansion-panel-header>
           <app-minutes-approval [approval]="minutes.minutesApproval"></app-minutes-approval>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('president')" (opened)="onPanelToggle('president', true)" (closed)="onPanelToggle('president', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>President's Report</mat-panel-title>
           </mat-expansion-panel-header>
           <app-president-report [report]="minutes.presidentReport"></app-president-report>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('vicepresident')" (opened)="onPanelToggle('vicepresident', true)" (closed)="onPanelToggle('vicepresident', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Vice President's Report</mat-panel-title>
           </mat-expansion-panel-header>
           <app-vice-president-report [report]="minutes.vicePresidentReport"></app-vice-president-report>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('committees')" (opened)="onPanelToggle('committees', true)" (closed)="onPanelToggle('committees', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Committee Reports</mat-panel-title>
           </mat-expansion-panel-header>
           <app-committee-reports [reports]="minutes.committeeReports"></app-committee-reports>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('oldbusiness')" (opened)="onPanelToggle('oldbusiness', true)" (closed)="onPanelToggle('oldbusiness', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Old Business</mat-panel-title>
           </mat-expansion-panel-header>
           <app-old-business [items]="minutes.oldBusiness"></app-old-business>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('newbusiness')" (opened)="onPanelToggle('newbusiness', true)" (closed)="onPanelToggle('newbusiness', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>New Business</mat-panel-title>
           </mat-expansion-panel-header>
           <app-new-business [items]="minutes.newBusiness"></app-new-business>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel [expanded]="isPanelExpanded('announcements')" (opened)="onPanelToggle('announcements', true)" (closed)="onPanelToggle('announcements', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Announcements</mat-panel-title>
           </mat-expansion-panel-header>

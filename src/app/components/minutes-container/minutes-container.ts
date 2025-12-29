@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -58,49 +59,92 @@ export class MinutesContainer implements OnInit {
   selectedMinutesType: MinutesType = 'board';
   filteredMinutes: MinutesFile[] = [];
 
+  expandedPanels: Set<string> = new Set();
+  private isRestoringState = false;
+
   constructor(
     private minutesData: MinutesData,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.loadClubs();
     this.loadDarkModePreference();
+
+    // Read URL parameters
+    this.route.queryParams.subscribe(params => {
+      const clubId = params['club'];
+      const minutesType = params['type'] as MinutesType;
+      const minutesUrl = params['minutes'];
+      const expanded = params['expanded'];
+
+      if (expanded) {
+        this.expandedPanels = new Set(expanded.split(','));
+      }
+
+      if (minutesType) {
+        this.selectedMinutesType = minutesType;
+      }
+
+      this.loadClubs(clubId, minutesUrl);
+    });
   }
 
-  loadClubs() {
+  loadClubs(urlClubId?: string, urlMinutesUrl?: string) {
+    this.isRestoringState = true;
     this.minutesData.loadClubsConfig().subscribe({
       next: (config) => {
         this.clubs = config.clubs;
         if (this.clubs.length > 0) {
-          // Try to load saved club preference
-          const savedClubId = localStorage.getItem('selectedClubId');
-          const savedClub = savedClubId
-            ? this.clubs.find(c => c.id === savedClubId)
-            : null;
-          this.selectClub(savedClub || this.clubs[0]);
+          // Priority: URL param > localStorage > first club
+          let targetClub: Club | undefined;
+
+          if (urlClubId) {
+            targetClub = this.clubs.find(c => c.id === urlClubId);
+          }
+
+          if (!targetClub) {
+            const savedClubId = localStorage.getItem('selectedClubId');
+            targetClub = savedClubId
+              ? this.clubs.find(c => c.id === savedClubId)
+              : undefined;
+          }
+
+          targetClub = targetClub || this.clubs[0];
+          this.selectClub(targetClub, urlMinutesUrl);
         }
+        this.isRestoringState = false;
       },
       error: (err) => {
         console.error('Error loading clubs config:', err);
         this.error = true;
+        this.isRestoringState = false;
       }
     });
   }
 
-  selectClub(club: Club) {
+  selectClub(club: Club, urlMinutesUrl?: string) {
     this.currentClub = club;
     localStorage.setItem('selectedClubId', club.id);
-    this.loadIndex(club.minutesIndexUrl);
+    this.loadIndex(club.minutesIndexUrl, urlMinutesUrl);
   }
 
-  loadIndex(indexUrl: string) {
+  loadIndex(indexUrl: string, urlMinutesUrl?: string) {
     this.minutesData.loadIndex(indexUrl).subscribe({
       next: (index) => {
         this.availableMinutes = index.minutes;
         this.filterMinutesByType();
-        if (this.filteredMinutes.length > 0) {
-          this.loadMinutesFile(this.filteredMinutes[0]);
+
+        // Find specific minutes file from URL or use first
+        let targetFile: MinutesFile | undefined;
+        if (urlMinutesUrl) {
+          targetFile = this.filteredMinutes.find(f => f.url === urlMinutesUrl);
+        }
+        targetFile = targetFile || this.filteredMinutes[0];
+
+        if (targetFile) {
+          this.loadMinutesFile(targetFile);
         }
       },
       error: (err) => {
@@ -132,6 +176,7 @@ export class MinutesContainer implements OnInit {
       next: (data) => {
         this.minutes = data;
         this.loading = false;
+        this.updateUrl();
       },
       error: (err) => {
         console.error('Error loading minutes:', err);
@@ -139,6 +184,44 @@ export class MinutesContainer implements OnInit {
         this.loading = false;
       }
     });
+  }
+
+  updateUrl() {
+    if (this.isRestoringState) return;
+
+    const queryParams: any = {};
+
+    if (this.currentClub) {
+      queryParams.club = this.currentClub.id;
+    }
+
+    if (this.currentFile) {
+      queryParams.type = this.selectedMinutesType;
+      queryParams.minutes = this.currentFile.url;
+    }
+
+    if (this.expandedPanels.size > 0) {
+      queryParams.expanded = Array.from(this.expandedPanels).join(',');
+    }
+
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams,
+      replaceState: true
+    });
+  }
+
+  onPanelToggle(panelId: string, opened: boolean) {
+    if (opened) {
+      this.expandedPanels.add(panelId);
+    } else {
+      this.expandedPanels.delete(panelId);
+    }
+    this.updateUrl();
+  }
+
+  isPanelExpanded(panelId: string): boolean {
+    return this.expandedPanels.has(panelId);
   }
 
   toggleDarkMode() {

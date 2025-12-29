@@ -313,3 +313,24 @@ Add a menu choice to the hamburger menu to export to markdown
 
 **Claude response completed at 2025-12-29 09:20:36**
 
+
+### User Prompt (2025-12-29 09:43:10)
+
+Make the URL reflect the state of the display so people can share the URL with a friend.  When the friend loads the URL the same club, minutes load with the same state of each component (collapsed or expanded).
+
+**Claude response completed at 2025-12-29 09:44:42**
+
+
+### User Prompt (2025-12-29 09:49:41)
+
+continue
+
+**Claude response completed at 2025-12-29 09:49:43**
+
+
+### User Prompt (2025-12-29 12:50:22)
+
+continue
+
+**Claude response completed at 2025-12-29 12:50:52**
+
