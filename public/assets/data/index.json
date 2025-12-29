@@ -1,0 +1,19 @@
+{
+  "minutes": [
+    {
+      "filename": "minutes_2025_01_15.json",
+      "date": "2025-01-15",
+      "title": "January 2025 Meeting"
+    },
+    {
+      "filename": "minutes_2024_12_18.json",
+      "date": "2024-12-18",
+      "title": "December 2024 Meeting"
+    },
+    {
+      "filename": "minutes_2024_11_20.json",
+      "date": "2024-11-20",
+      "title": "November 2024 Meeting"
+    }
+  ]
+}

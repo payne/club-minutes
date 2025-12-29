@@ -1,0 +1,88 @@
+{
+  "date": "2024-12-18",
+  "clubName": "Example Amateur Radio Club",
+  "attendees": [
+    {
+      "firstName": "John",
+      "callSign": "W1ABC",
+      "role": "President",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Sarah",
+      "callSign": "K2XYZ",
+      "role": "Vice President",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Mike",
+      "callSign": "N3DEF",
+      "role": "Treasurer",
+      "arrivalTime": "7:05 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Lisa",
+      "callSign": "KA4GHI",
+      "role": "Secretary",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Tom",
+      "callSign": "W5JKL",
+      "role": "Member",
+      "arrivalTime": "7:10 PM",
+      "departureTime": "8:45 PM"
+    }
+  ],
+  "financialReport": {
+    "currentBalance": 5234.50,
+    "changeSinceLastMonth": 125.00,
+    "changeThisYear": 425.75,
+    "balanceHistory": [
+      { "balance": 4800, "date": "2024-08-01" },
+      { "balance": 4850, "date": "2024-09-01" },
+      { "balance": 4900, "date": "2024-10-01" },
+      { "balance": 5000, "date": "2024-11-01" },
+      { "balance": 5100, "date": "2024-12-01" },
+      { "balance": 5234.50, "date": "2025-01-01" }
+    ]
+  },
+  "minutesApproval": {
+    "movedBy": "Sarah K2XYZ",
+    "secondedBy": "Mike N3DEF"
+  },
+  "presidentReport": "Welcome everyone to the January meeting. We had a successful Field Day last year and looking forward to planning this year's event. Our membership continues to grow with 3 new hams joining last month. I'd like to thank everyone who participated in the holiday social.",
+  "vicePresidentReport": "The technical committee has been working on upgrading our repeater equipment. We've received quotes from three vendors and will be presenting recommendations at the next meeting. Also planning a series of technical presentations for the spring.",
+  "committeeReports": [
+    {
+      "committeeName": "Repeater Committee",
+      "reportedBy": "Tom W5JKL",
+      "report": "The 2-meter repeater is operating normally. We performed maintenance on the backup power system. The 70cm repeater needs a new duplexer filter which we've ordered."
+    },
+    {
+      "committeeName": "Education Committee",
+      "reportedBy": "Lisa KA4GHI",
+      "report": "Planning a Technician class for March. We have 12 pre-registered students. Study materials have been ordered. Looking for volunteers to help with instruction."
+    }
+  ],
+  "oldBusiness": [
+    "Field Day 2025 site selection - committee to report next month",
+    "Repeater upgrade funding approved - work to begin in February",
+    "Club website redesign - new site launched successfully"
+  ],
+  "newBusiness": [
+    "Proposal to sponsor local high school STEM club - approved",
+    "Summer picnic planning - June 20th tentative date",
+    "Request for club participation in emergency communications drill"
+  ],
+  "announcements": [
+    "Next VE session: February 5th at 10:00 AM",
+    "State convention registration now open - early bird discount until Feb 1st",
+    "Monthly breakfast: Every Saturday at 8:00 AM at Joe's Diner",
+    "Next board meeting: February 19th at 7:00 PM"
+  ]
+}
