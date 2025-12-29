@@ -245,3 +245,10 @@ Committee Reports component should contain multiple instances of commitee report
 
 **Claude response completed at 2025-12-29 08:11:52**
 
+
+### User Prompt (2025-12-29 08:16:30)
+
+When printing much of the information is not appearing.  Fix.
+
+**Claude response completed at 2025-12-29 08:17:56**
+

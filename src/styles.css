@@ -29,4 +29,34 @@ body {
   .no-print {
     display: none !important;
   }
+
+  /* Force all expansion panels to be expanded for printing */
+  .mat-expansion-panel {
+    box-shadow: none !important;
+  }
+
+  .mat-expansion-panel-content {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0.5rem !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .mat-expanded .mat-expansion-panel-content,
+  .mat-expansion-panel-content {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+  }
+
+  /* Hide expansion indicators */
+  .mat-expansion-indicator {
+    display: none !important;
+  }
 }

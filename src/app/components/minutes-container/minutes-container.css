@@ -113,33 +113,70 @@ mat-expansion-panel {
     margin: 0.5in;
   }
 
+  mat-accordion {
+    display: block !important;
+  }
+
   mat-expansion-panel {
     box-shadow: none !important;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
   }
 
   mat-expansion-panel-header {
-    padding: 0 !important;
+    padding: 0.5rem !important;
     min-height: auto !important;
+    background: #f5f5f5 !important;
+    pointer-events: none !important;
   }
 
   mat-panel-title {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    color: #333 !important;
+  }
+
+  mat-panel-description {
+    margin: 0 !important;
   }
 
   .mat-expansion-panel-content {
     display: block !important;
     visibility: visible !important;
     height: auto !important;
+    overflow: visible !important;
   }
 
   .mat-expansion-panel-body {
-    padding: 0 !important;
+    padding: 0.5rem !important;
+    display: block !important;
+    visibility: visible !important;
   }
 
-  .mat-expansion-indicator {
+  .mat-expansion-indicator,
+  .mat-expansion-panel-header-description {
     display: none !important;
+  }
+
+  /* Ensure nested accordions in committee reports are also visible */
+  .committee-accordion {
+    display: block !important;
+  }
+
+  .committee-accordion mat-expansion-panel {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .committee-accordion .mat-expansion-panel-content {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+  }
+
+  .committee-accordion .mat-expansion-panel-body {
+    display: block !important;
+    visibility: visible !important;
   }
 }

@@ -17,35 +17,44 @@
 }
 
 @media print {
+  .committee-accordion {
+    display: block !important;
+  }
+
   .committee-accordion mat-expansion-panel {
     box-shadow: none !important;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem !important;
     page-break-inside: avoid;
+    border: 1px solid #ddd !important;
   }
 
   .committee-accordion mat-expansion-panel-header {
-    padding: 0 !important;
+    padding: 0.3rem 0.5rem !important;
     min-height: auto !important;
+    background: #f9f9f9 !important;
   }
 
   .committee-accordion mat-panel-title {
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: bold !important;
+    font-size: 1rem !important;
   }
 
   .committee-accordion mat-panel-description {
-    font-size: 0.85rem;
+    font-size: 0.85rem !important;
+    display: inline !important;
   }
 
   .committee-accordion .mat-expansion-panel-content {
     display: block !important;
     visibility: visible !important;
     height: auto !important;
+    overflow: visible !important;
   }
 
   .committee-accordion .mat-expansion-panel-body {
-    padding: 0 !important;
-    padding-top: 0.5rem !important;
+    padding: 0.5rem !important;
+    display: block !important;
+    visibility: visible !important;
   }
 
   .committee-accordion .mat-expansion-indicator {
@@ -53,7 +62,8 @@
   }
 
   .report-text {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
   }
 }
