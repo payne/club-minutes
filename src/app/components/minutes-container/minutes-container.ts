@@ -47,10 +47,12 @@ export class MinutesContainer implements OnInit {
   }
 
   loadMinutes() {
+    console.log('loadMinutes called');
     this.loading = true;
     this.error = false;
     this.minutesData.loadMinutes().subscribe({
       next: (data) => {
+        console.log('Data received:', data);
         this.minutes = data;
         this.loading = false;
       },
@@ -58,6 +60,9 @@ export class MinutesContainer implements OnInit {
         console.error('Error loading minutes:', err);
         this.error = true;
         this.loading = false;
+      },
+      complete: () => {
+        console.log('Observable completed');
       }
     });
   }

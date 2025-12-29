@@ -204,3 +204,30 @@ Output will be in `dist/club-minutes/`
 - Archive/search past minutes
 - Email distribution feature
 
+
+---
+
+## Session Started: 2025-12-29 07:42:35 (Source: startup)
+
+
+### User Prompt (2025-12-29 07:43:18)
+
+When I run this, using ng serve, the web page at localhost:4200 is mostly blank.  Why is the data from  public/assets/data/minutes.json not showing up?
+
+**Claude response completed at 2025-12-29 07:45:52**
+
+
+### User Prompt (2025-12-29 07:46:46)
+
+npm start
+
+**Claude response completed at 2025-12-29 07:49:41**
+
+
+### User Prompt (2025-12-29 07:51:24)
+
+After "Empty Cache and hard reload" the page at localhost:4200 still just says "Loading minutes.." with a heading of "- Board Minutes"
+please fix.
+
+**Claude response completed at 2025-12-29 07:52:38**
+
