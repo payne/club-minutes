@@ -1,0 +1,116 @@
+{
+  "date": "2025-01-08",
+  "clubName": "Example Amateur Radio Club",
+  "attendees": [
+    {
+      "firstName": "John",
+      "callSign": "W1ABC",
+      "role": "President",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Sarah",
+      "callSign": "K2XYZ",
+      "role": "Vice President",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Mike",
+      "callSign": "N3DEF",
+      "role": "Treasurer",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Lisa",
+      "callSign": "KA4GHI",
+      "role": "Secretary",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Tom",
+      "callSign": "W5JKL",
+      "role": "Member",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Bob",
+      "callSign": "KC6MNO",
+      "role": "Member",
+      "arrivalTime": "7:05 PM",
+      "departureTime": "8:30 PM"
+    },
+    {
+      "firstName": "Alice",
+      "callSign": "N7PQR",
+      "role": "Member",
+      "arrivalTime": "7:10 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Charlie",
+      "callSign": "K8STU",
+      "role": "Member",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Diana",
+      "callSign": "W9VWX",
+      "role": "Guest",
+      "arrivalTime": "7:15 PM",
+      "departureTime": "8:00 PM"
+    }
+  ],
+  "financialReport": {
+    "currentBalance": 5234.50,
+    "changeSinceLastMonth": 125.00,
+    "changeThisYear": 425.75,
+    "balanceHistory": [
+      { "balance": 4800, "date": "2024-08-01" },
+      { "balance": 4850, "date": "2024-09-01" },
+      { "balance": 4900, "date": "2024-10-01" },
+      { "balance": 5000, "date": "2024-11-01" },
+      { "balance": 5100, "date": "2024-12-01" },
+      { "balance": 5234.50, "date": "2025-01-01" }
+    ]
+  },
+  "minutesApproval": {
+    "movedBy": "Tom W5JKL",
+    "secondedBy": "Bob KC6MNO"
+  },
+  "presidentReport": "Happy New Year everyone! Great turnout tonight. We have exciting plans for 2025 including our Field Day preparation and the new Technician class starting in March. Thanks to everyone who helped with the holiday party.",
+  "vicePresidentReport": "Tonight's presentation will be on digital modes. We'll have hands-on demonstrations after the meeting. Also reminder that our club station is available for member use every Thursday evening.",
+  "committeeReports": [
+    {
+      "committeeName": "Events Committee",
+      "reportedBy": "Alice N7PQR",
+      "report": "Planning for Field Day 2025 is underway. We're looking at three potential sites. More details will be shared at the February meeting. Also organizing monthly social gatherings."
+    },
+    {
+      "committeeName": "Technical Committee",
+      "reportedBy": "Charlie K8STU",
+      "report": "Tonight's presentation on digital modes covers FT8, PSK31, and RTTY. We have three stations set up for hands-on practice. New members are encouraged to try operating digital modes."
+    }
+  ],
+  "oldBusiness": [
+    "Holiday party recap - successful event with 25 attendees",
+    "Club website updates - new calendar feature is live",
+    "Equipment inventory completed - all items accounted for"
+  ],
+  "newBusiness": [
+    "Proposal for club QSL card design contest - voting in February",
+    "Discussion on repeater etiquette guidelines",
+    "Planning hamfest participation for spring"
+  ],
+  "announcements": [
+    "Next general meeting: February 12th featuring antenna building workshop",
+    "VE testing session: February 5th at 10:00 AM",
+    "Winter Special Event Station: January 25-26",
+    "Club net every Monday at 8:00 PM on the 146.52 repeater"
+  ]
+}

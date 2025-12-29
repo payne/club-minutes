@@ -3,17 +3,32 @@
     {
       "url": "assets/data/example-arc/minutes_2025_01_15.json",
       "date": "2025-01-15",
-      "title": "January 2025 Meeting"
+      "title": "January 2025 Board Meeting",
+      "type": "board"
+    },
+    {
+      "url": "assets/data/example-arc/meeting_2025_01_08.json",
+      "date": "2025-01-08",
+      "title": "January 2025 General Meeting",
+      "type": "meeting"
     },
     {
       "url": "assets/data/example-arc/minutes_2024_12_18.json",
       "date": "2024-12-18",
-      "title": "December 2024 Meeting"
+      "title": "December 2024 Board Meeting",
+      "type": "board"
+    },
+    {
+      "url": "assets/data/example-arc/meeting_2024_12_11.json",
+      "date": "2024-12-11",
+      "title": "December 2024 General Meeting",
+      "type": "meeting"
     },
     {
       "url": "assets/data/example-arc/minutes_2024_11_20.json",
       "date": "2024-11-20",
-      "title": "November 2024 Meeting"
+      "title": "November 2024 Board Meeting",
+      "type": "board"
     }
   ]
 }

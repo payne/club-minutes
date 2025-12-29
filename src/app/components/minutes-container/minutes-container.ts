@@ -9,7 +9,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
 import { MinutesData } from '../../services/minutes-data';
-import { BoardMinutes, MinutesFile, Club } from '../../models/minutes.model';
+import { BoardMinutes, MinutesFile, Club, MinutesType } from '../../models/minutes.model';
 import { Attendance } from '../attendance/attendance';
 import { FinancialReport } from '../financial-report/financial-report';
 import { MinutesApproval } from '../minutes-approval/minutes-approval';
@@ -55,6 +55,8 @@ export class MinutesContainer implements OnInit {
   darkMode = false;
   clubs: Club[] = [];
   currentClub?: Club;
+  selectedMinutesType: MinutesType = 'board';
+  filteredMinutes: MinutesFile[] = [];
 
   constructor(
     private minutesData: MinutesData,
@@ -96,8 +98,9 @@ export class MinutesContainer implements OnInit {
     this.minutesData.loadIndex(indexUrl).subscribe({
       next: (index) => {
         this.availableMinutes = index.minutes;
-        if (this.availableMinutes.length > 0) {
-          this.loadMinutesFile(this.availableMinutes[0]);
+        this.filterMinutesByType();
+        if (this.filteredMinutes.length > 0) {
+          this.loadMinutesFile(this.filteredMinutes[0]);
         }
       },
       error: (err) => {
@@ -105,6 +108,20 @@ export class MinutesContainer implements OnInit {
         this.error = true;
       }
     });
+  }
+
+  selectMinutesType(type: MinutesType) {
+    this.selectedMinutesType = type;
+    this.filterMinutesByType();
+    if (this.filteredMinutes.length > 0) {
+      this.loadMinutesFile(this.filteredMinutes[0]);
+    }
+  }
+
+  filterMinutesByType() {
+    this.filteredMinutes = this.availableMinutes.filter(
+      m => m.type === this.selectedMinutesType
+    );
   }
 
   loadMinutesFile(file: MinutesFile) {

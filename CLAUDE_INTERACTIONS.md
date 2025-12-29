@@ -280,3 +280,15 @@ instead of storing minutes data in public/assets/data they should be read from a
 
 **Claude response completed at 2025-12-29 09:05:19**
 
+
+### User Prompt (2025-12-29 09:09:04)
+
+Right now there are only board minutes.  Add support for meeting minutes.
+
+
+---
+
+## Session Started: 2025-12-29 09:11:28 (Source: compact)
+
+**Claude response completed at 2025-12-29 09:13:42**
+

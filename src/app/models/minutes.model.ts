@@ -29,10 +29,13 @@ export interface CommitteeReport {
   report: string;
 }
 
+export type MinutesType = 'board' | 'meeting';
+
 export interface MinutesFile {
   url: string;
   date: string;
   title: string;
+  type: MinutesType;
 }
 
 export interface Club {

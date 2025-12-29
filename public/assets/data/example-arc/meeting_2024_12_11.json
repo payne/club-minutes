@@ -1,0 +1,109 @@
+{
+  "date": "2024-12-11",
+  "clubName": "Example Amateur Radio Club",
+  "attendees": [
+    {
+      "firstName": "John",
+      "callSign": "W1ABC",
+      "role": "President",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Sarah",
+      "callSign": "K2XYZ",
+      "role": "Vice President",
+      "arrivalTime": "7:00 PM",
+      "departureTime": "8:30 PM"
+    },
+    {
+      "firstName": "Mike",
+      "callSign": "N3DEF",
+      "role": "Treasurer",
+      "arrivalTime": "7:05 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Lisa",
+      "callSign": "KA4GHI",
+      "role": "Secretary",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Tom",
+      "callSign": "W5JKL",
+      "role": "Member",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Bob",
+      "callSign": "KC6MNO",
+      "role": "Member",
+      "arrivalTime": "7:10 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Charlie",
+      "callSign": "K8STU",
+      "role": "Member",
+      "arrivalTime": "7:00 PM",
+      "departureTime": ""
+    },
+    {
+      "firstName": "Frank",
+      "callSign": "KD0YZA",
+      "role": "Guest",
+      "arrivalTime": "7:20 PM",
+      "departureTime": ""
+    }
+  ],
+  "financialReport": {
+    "currentBalance": 5100.00,
+    "changeSinceLastMonth": 100.00,
+    "changeThisYear": 300.00,
+    "balanceHistory": [
+      { "balance": 4700, "date": "2024-07-01" },
+      { "balance": 4800, "date": "2024-08-01" },
+      { "balance": 4850, "date": "2024-09-01" },
+      { "balance": 4900, "date": "2024-10-01" },
+      { "balance": 5000, "date": "2024-11-01" },
+      { "balance": 5100, "date": "2024-12-01" }
+    ]
+  },
+  "minutesApproval": {
+    "movedBy": "Mike N3DEF",
+    "secondedBy": "Tom W5JKL"
+  },
+  "presidentReport": "December meeting and our annual holiday celebration! Thanks to everyone who brought food and helped with setup. We had a very successful year with increased membership and strong participation in club activities. Looking forward to 2025.",
+  "vicePresidentReport": "Tonight we're doing our annual show-and-tell. Members are encouraged to share their favorite radio projects from the year. We have some impressive homebrew equipment and interesting QSL cards to display.",
+  "committeeReports": [
+    {
+      "committeeName": "Holiday Party Committee",
+      "reportedBy": "Bob KC6MNO",
+      "report": "The holiday party will start immediately following the business meeting. We have food, drinks, and a white elephant gift exchange planned. Donations for the food bank are being collected at the door."
+    },
+    {
+      "committeeName": "Membership Committee",
+      "reportedBy": "Tom W5JKL",
+      "report": "We gained 8 new members this year bringing our total membership to 47. Retention rate is excellent at 92%. Working on a new member welcome packet for 2025."
+    }
+  ],
+  "oldBusiness": [
+    "Repeater maintenance completed successfully",
+    "Club library catalog now available online",
+    "Year-end financial audit scheduled for January"
+  ],
+  "newBusiness": [
+    "Election of officers for 2025 - nominations open",
+    "Approval of 2025 budget - will be voted on at January meeting",
+    "Discussion of club awards for outstanding members"
+  ],
+  "announcements": [
+    "Holiday party follows immediately after meeting",
+    "No VE session in December - resumes January 7th",
+    "Club station closed during holidays - reopens January 2nd",
+    "Next general meeting: January 8th at 7:00 PM"
+  ]
+}

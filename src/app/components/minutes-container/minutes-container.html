@@ -20,6 +20,11 @@
       <span>Select Club</span>
     </button>
     <mat-divider *ngIf="clubs.length > 1"></mat-divider>
+    <button mat-menu-item [matMenuTriggerFor]="minutesTypeMenu">
+      <mat-icon>category</mat-icon>
+      <span>Minutes Type</span>
+    </button>
+    <mat-divider></mat-divider>
     <button mat-menu-item [matMenuTriggerFor]="minutesMenu">
       <mat-icon>folder</mat-icon>
       <span>Select Minutes</span>
@@ -43,8 +48,19 @@
     </button>
   </mat-menu>
 
+  <mat-menu #minutesTypeMenu="matMenu">
+    <button mat-menu-item (click)="selectMinutesType('board')">
+      <mat-icon>{{ selectedMinutesType === 'board' ? 'check' : '' }}</mat-icon>
+      <span>Board Minutes</span>
+    </button>
+    <button mat-menu-item (click)="selectMinutesType('meeting')">
+      <mat-icon>{{ selectedMinutesType === 'meeting' ? 'check' : '' }}</mat-icon>
+      <span>General Meetings</span>
+    </button>
+  </mat-menu>
+
   <mat-menu #minutesMenu="matMenu">
-    <button mat-menu-item *ngFor="let file of availableMinutes" (click)="loadMinutesFile(file)">
+    <button mat-menu-item *ngFor="let file of filteredMinutes" (click)="loadMinutesFile(file)">
       <mat-icon>{{ currentFile?.url === file.url ? 'check' : '' }}</mat-icon>
       <span>{{ file.title }}</span>
     </button>

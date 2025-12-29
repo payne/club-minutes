@@ -3,7 +3,8 @@
     {
       "url": "assets/data/demo-club/minutes_2025_01_15.json",
       "date": "2025-01-15",
-      "title": "January 2025 Meeting"
+      "title": "January 2025 Meeting",
+      "type": "board"
     }
   ]
 }
