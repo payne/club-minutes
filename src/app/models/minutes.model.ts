@@ -6,11 +6,16 @@ export interface Attendee {
   departureTime?: string;
 }
 
+export interface BalanceHistoryEntry {
+  balance: number;
+  date: string;
+}
+
 export interface FinancialReport {
   currentBalance: number;
   changeSinceLastMonth: number;
   changeThisYear: number;
-  balanceHistory?: number[]; // For spark graph
+  balanceHistory?: BalanceHistoryEntry[];
 }
 
 export interface MinutesApproval {

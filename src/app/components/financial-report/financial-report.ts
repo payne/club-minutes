@@ -25,13 +25,14 @@ export class FinancialReport implements OnInit {
 
     const width = 100;
     const height = 30;
-    const min = Math.min(...data);
-    const max = Math.max(...data);
+    const balances = data.map(entry => entry.balance);
+    const min = Math.min(...balances);
+    const max = Math.max(...balances);
     const range = max - min || 1;
 
-    const points = data.map((value, index) => {
+    const points = data.map((entry, index) => {
       const x = (index / (data.length - 1)) * width;
-      const y = height - ((value - min) / range) * height;
+      const y = height - ((entry.balance - min) / range) * height;
       return `${x},${y}`;
     }).join(' ');
 

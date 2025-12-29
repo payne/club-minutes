@@ -42,7 +42,14 @@
     "currentBalance": 5234.50,
     "changeSinceLastMonth": 125.00,
     "changeThisYear": 425.75,
-    "balanceHistory": [4800, 4850, 4900, 5000, 5100, 5234.50]
+    "balanceHistory": [
+      { "balance": 4800, "date": "2024-08-01" },
+      { "balance": 4850, "date": "2024-09-01" },
+      { "balance": 4900, "date": "2024-10-01" },
+      { "balance": 5000, "date": "2024-11-01" },
+      { "balance": 5100, "date": "2024-12-01" },
+      { "balance": 5234.50, "date": "2025-01-01" }
+    ]
   },
   "minutesApproval": {
     "movedBy": "Sarah K2XYZ",
