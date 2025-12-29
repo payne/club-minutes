@@ -83,18 +83,30 @@
     "movedBy": "Tom W5JKL",
     "secondedBy": "Bob KC6MNO"
   },
-  "presidentReport": "Happy New Year everyone! Great turnout tonight. We have exciting plans for 2025 including our Field Day preparation and the new Technician class starting in March. Thanks to everyone who helped with the holiday party.",
-  "vicePresidentReport": "Tonight's presentation will be on digital modes. We'll have hands-on demonstrations after the meeting. Also reminder that our club station is available for member use every Thursday evening.",
+  "presidentReport": [
+    "Happy New Year everyone! Great turnout tonight. We have exciting plans for 2025 including our Field Day preparation and the new Technician class starting in March. Thanks to everyone who helped with the holiday party.",
+    "Looking forward to another successful year for the club!"
+  ],
+  "vicePresidentReport": [
+    "Tonight's presentation will be on digital modes. We'll have hands-on demonstrations after the meeting.",
+    "Also reminder that our club station is available for member use every Thursday evening."
+  ],
   "committeeReports": [
     {
       "committeeName": "Events Committee",
       "reportedBy": "Alice N7PQR",
-      "report": "Planning for Field Day 2025 is underway. We're looking at three potential sites. More details will be shared at the February meeting. Also organizing monthly social gatherings."
+      "report": [
+        "Planning for Field Day 2025 is underway. We're looking at three potential sites.",
+        "More details will be shared at the February meeting. Also organizing monthly social gatherings."
+      ]
     },
     {
       "committeeName": "Technical Committee",
       "reportedBy": "Charlie K8STU",
-      "report": "Tonight's presentation on digital modes covers FT8, PSK31, and RTTY. We have three stations set up for hands-on practice. New members are encouraged to try operating digital modes."
+      "report": [
+        "Tonight's presentation on digital modes covers FT8, PSK31, and RTTY.",
+        "We have three stations set up for hands-on practice. New members are encouraged to try operating digital modes."
+      ]
     }
   ],
   "oldBusiness": [

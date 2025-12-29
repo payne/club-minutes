@@ -76,18 +76,30 @@
     "movedBy": "Mike N3DEF",
     "secondedBy": "Tom W5JKL"
   },
-  "presidentReport": "December meeting and our annual holiday celebration! Thanks to everyone who brought food and helped with setup. We had a very successful year with increased membership and strong participation in club activities. Looking forward to 2025.",
-  "vicePresidentReport": "Tonight we're doing our annual show-and-tell. Members are encouraged to share their favorite radio projects from the year. We have some impressive homebrew equipment and interesting QSL cards to display.",
+  "presidentReport": [
+    "December meeting and our annual holiday celebration! Thanks to everyone who brought food and helped with setup.",
+    "We had a very successful year with increased membership and strong participation in club activities. Looking forward to 2025."
+  ],
+  "vicePresidentReport": [
+    "Tonight we're doing our annual show-and-tell. Members are encouraged to share their favorite radio projects from the year.",
+    "We have some impressive homebrew equipment and interesting QSL cards to display."
+  ],
   "committeeReports": [
     {
       "committeeName": "Holiday Party Committee",
       "reportedBy": "Bob KC6MNO",
-      "report": "The holiday party will start immediately following the business meeting. We have food, drinks, and a white elephant gift exchange planned. Donations for the food bank are being collected at the door."
+      "report": [
+        "The holiday party will start immediately following the business meeting.",
+        "We have food, drinks, and a white elephant gift exchange planned. Donations for the food bank are being collected at the door."
+      ]
     },
     {
       "committeeName": "Membership Committee",
       "reportedBy": "Tom W5JKL",
-      "report": "We gained 8 new members this year bringing our total membership to 47. Retention rate is excellent at 92%. Working on a new member welcome packet for 2025."
+      "report": [
+        "We gained 8 new members this year bringing our total membership to 47. Retention rate is excellent at 92%.",
+        "Working on a new member welcome packet for 2025."
+      ]
     }
   ],
   "oldBusiness": [

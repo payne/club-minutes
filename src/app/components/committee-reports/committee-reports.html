@@ -8,6 +8,8 @@
         {{ report.reportedBy }}
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p class="report-text">{{ report.report }}</p>
+    <ol class="report-list">
+      <li *ngFor="let item of report.report">{{ item }}</li>
+    </ol>
   </mat-expansion-panel>
 </mat-accordion>

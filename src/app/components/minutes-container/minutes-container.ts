@@ -207,7 +207,7 @@ export class MinutesContainer implements OnInit {
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams,
-      replaceState: true
+      replaceUrl: true
     });
   }
 
@@ -289,38 +289,47 @@ export class MinutesContainer implements OnInit {
 
     // President's Report
     markdown += `## President's Report\n\n`;
-    markdown += `${this.minutes.presidentReport}\n\n`;
+    this.minutes.presidentReport.forEach((item, index) => {
+      markdown += `${index + 1}. ${item}\n`;
+    });
+    markdown += `\n`;
 
     // Vice President's Report
     markdown += `## Vice President's Report\n\n`;
-    markdown += `${this.minutes.vicePresidentReport}\n\n`;
+    this.minutes.vicePresidentReport.forEach((item, index) => {
+      markdown += `${index + 1}. ${item}\n`;
+    });
+    markdown += `\n`;
 
     // Committee Reports
     markdown += `## Committee Reports\n\n`;
     this.minutes.committeeReports.forEach(report => {
       markdown += `### ${report.committeeName}\n`;
       markdown += `**Reported by:** ${report.reportedBy}\n\n`;
-      markdown += `${report.report}\n\n`;
+      report.report.forEach((item, index) => {
+        markdown += `${index + 1}. ${item}\n`;
+      });
+      markdown += `\n`;
     });
 
     // Old Business
     markdown += `## Old Business\n\n`;
-    this.minutes.oldBusiness.forEach(item => {
-      markdown += `- ${item}\n`;
+    this.minutes.oldBusiness.forEach((item, index) => {
+      markdown += `${index + 1}. ${item}\n`;
     });
     markdown += `\n`;
 
     // New Business
     markdown += `## New Business\n\n`;
-    this.minutes.newBusiness.forEach(item => {
-      markdown += `- ${item}\n`;
+    this.minutes.newBusiness.forEach((item, index) => {
+      markdown += `${index + 1}. ${item}\n`;
     });
     markdown += `\n`;
 
     // Announcements
     markdown += `## Announcements\n\n`;
-    this.minutes.announcements.forEach(item => {
-      markdown += `- ${item}\n`;
+    this.minutes.announcements.forEach((item, index) => {
+      markdown += `${index + 1}. ${item}\n`;
     });
 
     // Create and download file

@@ -55,18 +55,30 @@
     "movedBy": "Sarah K2XYZ",
     "secondedBy": "Mike N3DEF"
   },
-  "presidentReport": "Welcome everyone to the January meeting. We had a successful Field Day last year and looking forward to planning this year's event. Our membership continues to grow with 3 new hams joining last month. I'd like to thank everyone who participated in the holiday social.",
-  "vicePresidentReport": "The technical committee has been working on upgrading our repeater equipment. We've received quotes from three vendors and will be presenting recommendations at the next meeting. Also planning a series of technical presentations for the spring.",
+  "presidentReport": [
+    "Welcome to our December board meeting. As we close out the year, I'm pleased to report strong club activity and engagement.",
+    "Looking ahead to 2025, we have exciting plans for repeater upgrades and expanded educational programs."
+  ],
+  "vicePresidentReport": [
+    "Final preparations for the repeater upgrade project are underway. Vendor selection will be completed in January.",
+    "Planning technical presentation series for spring, focusing on digital modes and antenna construction."
+  ],
   "committeeReports": [
     {
       "committeeName": "Repeater Committee",
       "reportedBy": "Tom W5JKL",
-      "report": "The 2-meter repeater is operating normally. We performed maintenance on the backup power system. The 70cm repeater needs a new duplexer filter which we've ordered."
+      "report": [
+        "Both repeaters are operating normally. Completed winterization of the backup power system.",
+        "New duplexer filter for 70cm repeater has been ordered and should arrive in January."
+      ]
     },
     {
       "committeeName": "Education Committee",
       "reportedBy": "Lisa KA4GHI",
-      "report": "Planning a Technician class for March. We have 12 pre-registered students. Study materials have been ordered. Looking for volunteers to help with instruction."
+      "report": [
+        "Technician class planning is progressing well. Registration opens January 15th.",
+        "Secured classroom space at the community center. Looking for volunteer instructors."
+      ]
     }
   ],
   "oldBusiness": [

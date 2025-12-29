@@ -55,18 +55,30 @@
     "movedBy": "Sarah K2XYZ",
     "secondedBy": "Mike N3DEF"
   },
-  "presidentReport": "Welcome everyone to the January meeting. We had a successful Field Day last year and looking forward to planning this year's event. Our membership continues to grow with 3 new hams joining last month. I'd like to thank everyone who participated in the holiday social.",
-  "vicePresidentReport": "The technical committee has been working on upgrading our repeater equipment. We've received quotes from three vendors and will be presenting recommendations at the next meeting. Also planning a series of technical presentations for the spring.",
+  "presidentReport": [
+    "Welcome to the November board meeting. We're wrapping up another successful year with strong participation across all club activities.",
+    "Holiday party planning is underway. Looking forward to celebrating together in December."
+  ],
+  "vicePresidentReport": [
+    "Repeater upgrade project proposals have been received from three vendors. Full analysis will be presented at the December meeting.",
+    "Working on technical presentation schedule for early 2025. Members are encouraged to suggest topics."
+  ],
   "committeeReports": [
     {
       "committeeName": "Repeater Committee",
       "reportedBy": "Tom W5JKL",
-      "report": "The 2-meter repeater is operating normally. We performed maintenance on the backup power system. The 70cm repeater needs a new duplexer filter which we've ordered."
+      "report": [
+        "Both repeaters continue to operate reliably. Fall maintenance completed successfully.",
+        "Evaluating backup power upgrades to improve storm resilience. Budget proposal forthcoming."
+      ]
     },
     {
       "committeeName": "Education Committee",
       "reportedBy": "Lisa KA4GHI",
-      "report": "Planning a Technician class for March. We have 12 pre-registered students. Study materials have been ordered. Looking for volunteers to help with instruction."
+      "report": [
+        "Initial planning for spring Technician class is underway. Target start date is March 1st.",
+        "Coordinating with local schools for STEM outreach opportunities in the new year."
+      ]
     }
   ],
   "oldBusiness": [

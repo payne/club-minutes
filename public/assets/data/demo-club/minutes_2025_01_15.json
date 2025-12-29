@@ -55,18 +55,30 @@
     "movedBy": "Sarah K2XYZ",
     "secondedBy": "Mike N3DEF"
   },
-  "presidentReport": "Welcome everyone to the January meeting. We had a successful Field Day last year and looking forward to planning this year's event. Our membership continues to grow with 3 new hams joining last month. I'd like to thank everyone who participated in the holiday social.",
-  "vicePresidentReport": "The technical committee has been working on upgrading our repeater equipment. We've received quotes from three vendors and will be presenting recommendations at the next meeting. Also planning a series of technical presentations for the spring.",
+  "presidentReport": [
+    "Welcome to the Demo Radio Club's January meeting. We're excited to start the new year with great energy and participation.",
+    "Our club continues to thrive with new members and exciting projects ahead."
+  ],
+  "vicePresidentReport": [
+    "Equipment upgrades are moving forward. We've narrowed down vendor options and will make a final decision soon.",
+    "Planning educational sessions for the coming months. Input from members is always welcome."
+  ],
   "committeeReports": [
     {
       "committeeName": "Repeater Committee",
       "reportedBy": "Tom W5JKL",
-      "report": "The 2-meter repeater is operating normally. We performed maintenance on the backup power system. The 70cm repeater needs a new duplexer filter which we've ordered."
+      "report": [
+        "All repeater systems are functioning well. Recent maintenance has improved reliability.",
+        "Planning equipment upgrades for better coverage in the southern areas of our coverage zone."
+      ]
     },
     {
       "committeeName": "Education Committee",
       "reportedBy": "Lisa KA4GHI",
-      "report": "Planning a Technician class for March. We have 12 pre-registered students. Study materials have been ordered. Looking for volunteers to help with instruction."
+      "report": [
+        "Spring licensing class preparations are underway. We expect strong enrollment.",
+        "Developing mentorship program to help new hams get on the air successfully."
+      ]
     }
   ],
   "oldBusiness": [

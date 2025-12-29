@@ -9,5 +9,5 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './vice-president-report.css',
 })
 export class VicePresidentReport {
-  @Input() report: string = '';
+  @Input() report: string[] = [];
 }

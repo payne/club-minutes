@@ -26,7 +26,7 @@ export interface MinutesApproval {
 export interface CommitteeReport {
   committeeName: string;
   reportedBy: string;
-  report: string;
+  report: string[];
 }
 
 export type MinutesType = 'board' | 'meeting';
@@ -58,8 +58,8 @@ export interface BoardMinutes {
   attendees: Attendee[];
   financialReport: FinancialReport;
   minutesApproval: MinutesApproval;
-  presidentReport: string;
-  vicePresidentReport: string;
+  presidentReport: string[];
+  vicePresidentReport: string[];
   committeeReports: CommitteeReport[];
   oldBusiness: string[];
   newBusiness: string[];
