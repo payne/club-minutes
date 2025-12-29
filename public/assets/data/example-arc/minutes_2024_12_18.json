@@ -5,37 +5,27 @@
     {
       "firstName": "John",
       "callSign": "W1ABC",
-      "role": "President",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "President"
     },
     {
       "firstName": "Sarah",
       "callSign": "K2XYZ",
-      "role": "Vice President",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "Vice President"
     },
     {
       "firstName": "Mike",
       "callSign": "N3DEF",
-      "role": "Treasurer",
-      "arrivalTime": "7:05 PM",
-      "departureTime": ""
+      "role": "Treasurer"
     },
     {
       "firstName": "Lisa",
       "callSign": "KA4GHI",
-      "role": "Secretary",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "Secretary"
     },
     {
       "firstName": "Tom",
       "callSign": "W5JKL",
-      "role": "Member",
-      "arrivalTime": "7:10 PM",
-      "departureTime": "8:45 PM"
+      "role": "Member"
     }
   ],
   "financialReport": {

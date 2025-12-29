@@ -2,8 +2,7 @@ export interface Attendee {
   firstName: string;
   callSign: string;
   role: string;
-  arrivalTime?: string;
-  departureTime?: string;
+  notes?: string[];
 }
 
 export interface BalanceHistoryEntry {

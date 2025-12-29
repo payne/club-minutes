@@ -5,58 +5,44 @@
     {
       "firstName": "John",
       "callSign": "W1ABC",
-      "role": "President",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "President"
     },
     {
       "firstName": "Sarah",
       "callSign": "K2XYZ",
       "role": "Vice President",
-      "arrivalTime": "7:00 PM",
-      "departureTime": "8:30 PM"
+      "notes": ["Left early at 8:30 PM"]
     },
     {
       "firstName": "Mike",
       "callSign": "N3DEF",
-      "role": "Treasurer",
-      "arrivalTime": "7:05 PM",
-      "departureTime": ""
+      "role": "Treasurer"
     },
     {
       "firstName": "Lisa",
       "callSign": "KA4GHI",
-      "role": "Secretary",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "Secretary"
     },
     {
       "firstName": "Tom",
       "callSign": "W5JKL",
-      "role": "Member",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "Member"
     },
     {
       "firstName": "Bob",
       "callSign": "KC6MNO",
-      "role": "Member",
-      "arrivalTime": "7:10 PM",
-      "departureTime": ""
+      "role": "Member"
     },
     {
       "firstName": "Charlie",
       "callSign": "K8STU",
-      "role": "Member",
-      "arrivalTime": "7:00 PM",
-      "departureTime": ""
+      "role": "Member"
     },
     {
       "firstName": "Frank",
       "callSign": "KD0YZA",
       "role": "Guest",
-      "arrivalTime": "7:20 PM",
-      "departureTime": ""
+      "notes": ["First time visitor"]
     }
   ],
   "financialReport": {

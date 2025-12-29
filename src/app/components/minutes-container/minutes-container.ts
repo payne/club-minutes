@@ -259,10 +259,13 @@ export class MinutesContainer implements OnInit {
 
     // Attendance
     markdown += `## Attendance\n\n`;
-    markdown += `| Name | Call Sign | Role | Arrival | Departure |\n`;
-    markdown += `|------|-----------|------|---------|------------|\n`;
+    markdown += `| Name | Call Sign | Role | Notes |\n`;
+    markdown += `|------|-----------|------|---------|\n`;
     this.minutes.attendees.forEach(attendee => {
-      markdown += `| ${attendee.firstName} | ${attendee.callSign} | ${attendee.role} | ${attendee.arrivalTime || ''} | ${attendee.departureTime || ''} |\n`;
+      const notes = attendee.notes && attendee.notes.length > 0
+        ? attendee.notes.map((note, index) => `${index + 1}. ${note}`).join('<br>')
+        : '';
+      markdown += `| ${attendee.firstName} | ${attendee.callSign} | ${attendee.role} | ${notes} |\n`;
     });
     markdown += `\n`;
 

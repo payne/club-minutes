@@ -12,5 +12,5 @@ import { Attendee } from '../../models/minutes.model';
 })
 export class Attendance {
   @Input() attendees: Attendee[] = [];
-  displayedColumns: string[] = ['name', 'callSign', 'role', 'arrivalTime', 'departureTime'];
+  displayedColumns: string[] = ['name', 'callSign', 'role', 'notes'];
 }
