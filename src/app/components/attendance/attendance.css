@@ -1,0 +1,35 @@
+.section-card {
+  margin-bottom: 1rem;
+}
+
+.attendance-table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.attendance-table th {
+  font-weight: 600;
+}
+
+.attendance-table td,
+.attendance-table th {
+  padding: 0.5rem;
+}
+
+@media print {
+  .section-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    page-break-inside: avoid;
+  }
+
+  .attendance-table {
+    font-size: 0.8rem;
+  }
+
+  .attendance-table td,
+  .attendance-table th {
+    padding: 0.25rem;
+  }
+}

@@ -1,0 +1,31 @@
+.section-card {
+  margin-bottom: 1rem;
+}
+
+.business-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.business-list li {
+  margin-bottom: 0.5rem;
+}
+
+@media print {
+  .section-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    page-break-inside: avoid;
+  }
+
+  .business-list {
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  .business-list li {
+    margin-bottom: 0.25rem;
+  }
+}

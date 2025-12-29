@@ -1,0 +1,22 @@
+.section-card {
+  margin-bottom: 1rem;
+}
+
+.report-text {
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media print {
+  .section-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    page-break-inside: avoid;
+  }
+
+  .report-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}

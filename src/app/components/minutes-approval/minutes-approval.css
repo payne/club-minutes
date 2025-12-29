@@ -1,0 +1,30 @@
+.section-card {
+  margin-bottom: 1rem;
+}
+
+.compact-card mat-card-content {
+  padding: 0.5rem 1rem;
+}
+
+.approval-info {
+  display: flex;
+  gap: 2rem;
+}
+
+@media print {
+  .section-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    page-break-inside: avoid;
+  }
+
+  .compact-card mat-card-content {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .approval-info {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
