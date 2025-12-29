@@ -238,3 +238,10 @@ Make it so every component may be collapsed or expanded.  Start all components c
 
 **Claude response completed at 2025-12-29 08:04:23**
 
+
+### User Prompt (2025-12-29 08:10:21)
+
+Committee Reports component should contain multiple instances of commitee report component.  Each commitee report instance may be seperately collapsed or expanded.
+
+**Claude response completed at 2025-12-29 08:11:52**
+
