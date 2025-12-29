@@ -306,3 +306,10 @@ The header to the right of the hamburger menu should display the club name, type
 
 **Claude response completed at 2025-12-29 09:18:01**
 
+
+### User Prompt (2025-12-29 09:19:45)
+
+Add a menu choice to the hamburger menu to export to markdown
+
+**Claude response completed at 2025-12-29 09:20:36**
+

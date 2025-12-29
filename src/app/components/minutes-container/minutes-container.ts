@@ -165,4 +165,88 @@ export class MinutesContainer implements OnInit {
   print() {
     window.print();
   }
+
+  exportToMarkdown() {
+    if (!this.minutes || !this.currentFile) return;
+
+    const minutesType = this.currentFile.type === 'board' ? 'Board Meeting' : 'General Meeting';
+    let markdown = `# ${this.minutes.clubName}\n`;
+    markdown += `## ${minutesType} Minutes\n`;
+    markdown += `**Date:** ${this.minutes.date}\n\n`;
+
+    // Attendance
+    markdown += `## Attendance\n\n`;
+    markdown += `| Name | Call Sign | Role | Arrival | Departure |\n`;
+    markdown += `|------|-----------|------|---------|------------|\n`;
+    this.minutes.attendees.forEach(attendee => {
+      markdown += `| ${attendee.firstName} | ${attendee.callSign} | ${attendee.role} | ${attendee.arrivalTime || ''} | ${attendee.departureTime || ''} |\n`;
+    });
+    markdown += `\n`;
+
+    // Financial Report
+    markdown += `## Financial Report\n\n`;
+    markdown += `- **Current Balance:** $${this.minutes.financialReport.currentBalance.toFixed(2)}\n`;
+    markdown += `- **Change Since Last Month:** $${this.minutes.financialReport.changeSinceLastMonth.toFixed(2)}\n`;
+    markdown += `- **Change This Year:** $${this.minutes.financialReport.changeThisYear.toFixed(2)}\n\n`;
+
+    if (this.minutes.financialReport.balanceHistory && this.minutes.financialReport.balanceHistory.length > 0) {
+      markdown += `### Balance History\n\n`;
+      markdown += `| Date | Balance |\n`;
+      markdown += `|------|----------|\n`;
+      this.minutes.financialReport.balanceHistory.forEach(entry => {
+        markdown += `| ${entry.date} | $${entry.balance.toFixed(2)} |\n`;
+      });
+      markdown += `\n`;
+    }
+
+    // Minutes Approval
+    markdown += `## Minutes Approval\n\n`;
+    markdown += `- **Moved by:** ${this.minutes.minutesApproval.movedBy}\n`;
+    markdown += `- **Seconded by:** ${this.minutes.minutesApproval.secondedBy}\n\n`;
+
+    // President's Report
+    markdown += `## President's Report\n\n`;
+    markdown += `${this.minutes.presidentReport}\n\n`;
+
+    // Vice President's Report
+    markdown += `## Vice President's Report\n\n`;
+    markdown += `${this.minutes.vicePresidentReport}\n\n`;
+
+    // Committee Reports
+    markdown += `## Committee Reports\n\n`;
+    this.minutes.committeeReports.forEach(report => {
+      markdown += `### ${report.committeeName}\n`;
+      markdown += `**Reported by:** ${report.reportedBy}\n\n`;
+      markdown += `${report.report}\n\n`;
+    });
+
+    // Old Business
+    markdown += `## Old Business\n\n`;
+    this.minutes.oldBusiness.forEach(item => {
+      markdown += `- ${item}\n`;
+    });
+    markdown += `\n`;
+
+    // New Business
+    markdown += `## New Business\n\n`;
+    this.minutes.newBusiness.forEach(item => {
+      markdown += `- ${item}\n`;
+    });
+    markdown += `\n`;
+
+    // Announcements
+    markdown += `## Announcements\n\n`;
+    this.minutes.announcements.forEach(item => {
+      markdown += `- ${item}\n`;
+    });
+
+    // Create and download file
+    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${this.currentClub?.id || 'club'}_${this.currentFile.type}_${this.minutes.date}.md`;
+    link.click();
+    window.URL.revokeObjectURL(url);
+  }
 }

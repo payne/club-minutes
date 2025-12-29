@@ -42,6 +42,11 @@
       <span>{{ darkMode ? 'Light Mode' : 'Dark Mode' }}</span>
     </button>
     <mat-divider></mat-divider>
+    <button mat-menu-item (click)="exportToMarkdown()" *ngIf="!loading && !error && minutes">
+      <mat-icon>download</mat-icon>
+      <span>Export to Markdown</span>
+    </button>
+    <mat-divider *ngIf="!loading && !error && minutes"></mat-divider>
     <button mat-menu-item (click)="openAboutDialog()">
       <mat-icon>info</mat-icon>
       <span>About</span>
