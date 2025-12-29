@@ -273,3 +273,10 @@ Make sure the application looks good on a mobile phone, tablet, and desktop comp
 
 **Claude response completed at 2025-12-29 08:58:41**
 
+
+### User Prompt (2025-12-29 09:02:05)
+
+instead of storing minutes data in public/assets/data they should be read from a URL.  An array of club minute URLs should be used.  There should be a choice in the hamburger menu to choose the club.
+
+**Claude response completed at 2025-12-29 09:05:19**
+

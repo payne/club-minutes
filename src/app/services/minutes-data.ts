@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { BoardMinutes, MinutesIndex } from '../models/minutes.model';
+import { BoardMinutes, MinutesIndex, ClubsConfig } from '../models/minutes.model';
 
 @Injectable({
   providedIn: 'root',
@@ -9,11 +9,15 @@ import { BoardMinutes, MinutesIndex } from '../models/minutes.model';
 export class MinutesData {
   constructor(private http: HttpClient) {}
 
-  loadIndex(): Observable<MinutesIndex> {
-    return this.http.get<MinutesIndex>('assets/data/index.json');
+  loadClubsConfig(): Observable<ClubsConfig> {
+    return this.http.get<ClubsConfig>('assets/config/clubs.json');
   }
 
-  loadMinutes(filename: string): Observable<BoardMinutes> {
-    return this.http.get<BoardMinutes>(`assets/data/${filename}`);
+  loadIndex(indexUrl: string): Observable<MinutesIndex> {
+    return this.http.get<MinutesIndex>(indexUrl);
+  }
+
+  loadMinutes(url: string): Observable<BoardMinutes> {
+    return this.http.get<BoardMinutes>(url);
   }
 }

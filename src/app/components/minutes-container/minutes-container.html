@@ -3,7 +3,7 @@
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="toolbar-title">{{ currentFile?.title || 'Club Minutes' }}</span>
+    <span class="toolbar-title">{{ currentClub?.name || 'Club Minutes' }}</span>
     <span class="spacer"></span>
     <button mat-icon-button color="accent" (click)="print()" *ngIf="!loading && !error" class="mobile-only">
       <mat-icon>print</mat-icon>
@@ -15,6 +15,11 @@
   </mat-toolbar>
 
   <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="clubMenu" *ngIf="clubs.length > 1">
+      <mat-icon>group</mat-icon>
+      <span>Select Club</span>
+    </button>
+    <mat-divider *ngIf="clubs.length > 1"></mat-divider>
     <button mat-menu-item [matMenuTriggerFor]="minutesMenu">
       <mat-icon>folder</mat-icon>
       <span>Select Minutes</span>
@@ -31,9 +36,16 @@
     </button>
   </mat-menu>
 
+  <mat-menu #clubMenu="matMenu">
+    <button mat-menu-item *ngFor="let club of clubs" (click)="selectClub(club)">
+      <mat-icon>{{ currentClub?.id === club.id ? 'check' : '' }}</mat-icon>
+      <span>{{ club.name }}</span>
+    </button>
+  </mat-menu>
+
   <mat-menu #minutesMenu="matMenu">
     <button mat-menu-item *ngFor="let file of availableMinutes" (click)="loadMinutesFile(file)">
-      <mat-icon>{{ currentFile?.filename === file.filename ? 'check' : '' }}</mat-icon>
+      <mat-icon>{{ currentFile?.url === file.url ? 'check' : '' }}</mat-icon>
       <span>{{ file.title }}</span>
     </button>
   </mat-menu>

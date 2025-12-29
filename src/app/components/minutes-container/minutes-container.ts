@@ -9,7 +9,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
 import { MinutesData } from '../../services/minutes-data';
-import { BoardMinutes, MinutesFile } from '../../models/minutes.model';
+import { BoardMinutes, MinutesFile, Club } from '../../models/minutes.model';
 import { Attendance } from '../attendance/attendance';
 import { FinancialReport } from '../financial-report/financial-report';
 import { MinutesApproval } from '../minutes-approval/minutes-approval';
@@ -53,6 +53,8 @@ export class MinutesContainer implements OnInit {
   availableMinutes: MinutesFile[] = [];
   currentFile?: MinutesFile;
   darkMode = false;
+  clubs: Club[] = [];
+  currentClub?: Club;
 
   constructor(
     private minutesData: MinutesData,
@@ -60,12 +62,38 @@ export class MinutesContainer implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loadIndex();
+    this.loadClubs();
     this.loadDarkModePreference();
   }
 
-  loadIndex() {
-    this.minutesData.loadIndex().subscribe({
+  loadClubs() {
+    this.minutesData.loadClubsConfig().subscribe({
+      next: (config) => {
+        this.clubs = config.clubs;
+        if (this.clubs.length > 0) {
+          // Try to load saved club preference
+          const savedClubId = localStorage.getItem('selectedClubId');
+          const savedClub = savedClubId
+            ? this.clubs.find(c => c.id === savedClubId)
+            : null;
+          this.selectClub(savedClub || this.clubs[0]);
+        }
+      },
+      error: (err) => {
+        console.error('Error loading clubs config:', err);
+        this.error = true;
+      }
+    });
+  }
+
+  selectClub(club: Club) {
+    this.currentClub = club;
+    localStorage.setItem('selectedClubId', club.id);
+    this.loadIndex(club.minutesIndexUrl);
+  }
+
+  loadIndex(indexUrl: string) {
+    this.minutesData.loadIndex(indexUrl).subscribe({
       next: (index) => {
         this.availableMinutes = index.minutes;
         if (this.availableMinutes.length > 0) {
@@ -83,7 +111,7 @@ export class MinutesContainer implements OnInit {
     this.loading = true;
     this.error = false;
     this.currentFile = file;
-    this.minutesData.loadMinutes(file.filename).subscribe({
+    this.minutesData.loadMinutes(file.url).subscribe({
       next: (data) => {
         this.minutes = data;
         this.loading = false;

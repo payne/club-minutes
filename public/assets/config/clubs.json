@@ -1,0 +1,14 @@
+{
+  "clubs": [
+    {
+      "id": "example-arc",
+      "name": "Example Amateur Radio Club",
+      "minutesIndexUrl": "assets/data/example-arc/index.json"
+    },
+    {
+      "id": "demo-club",
+      "name": "Demo Radio Club",
+      "minutesIndexUrl": "assets/data/demo-club/index.json"
+    }
+  ]
+}
