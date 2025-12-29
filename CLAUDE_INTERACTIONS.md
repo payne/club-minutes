@@ -259,3 +259,10 @@ Balance history array in minutes.json should contain pairs: balance and date
 
 **Claude response completed at 2025-12-29 08:35:47**
 
+
+### User Prompt (2025-12-29 08:41:00)
+
+instead of minutes.json there should be minutes_yyyy_mm_dd.json files.  Add a hamburger menu in the top bar.  This menu should include an option for choosing the minutes file (listing them in reverse chronological order), a toggle for dark mode, and an about option
+
+**Claude response completed at 2025-12-29 08:45:32**
+

@@ -1,12 +1,39 @@
 <div class="minutes-app">
   <mat-toolbar color="primary" class="no-print">
-    <span>{{ minutes?.clubName }} - Board Minutes</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{ currentFile?.title || 'Club Minutes' }}</span>
     <span class="spacer"></span>
     <button mat-raised-button color="accent" (click)="print()" *ngIf="!loading && !error">
       <mat-icon>print</mat-icon>
       Print
     </button>
   </mat-toolbar>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="minutesMenu">
+      <mat-icon>folder</mat-icon>
+      <span>Select Minutes</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="toggleDarkMode()">
+      <mat-icon>{{ darkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
+      <span>{{ darkMode ? 'Light Mode' : 'Dark Mode' }}</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="openAboutDialog()">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </button>
+  </mat-menu>
+
+  <mat-menu #minutesMenu="matMenu">
+    <button mat-menu-item *ngFor="let file of availableMinutes" (click)="loadMinutesFile(file)">
+      <mat-icon>{{ currentFile?.filename === file.filename ? 'check' : '' }}</mat-icon>
+      <span>{{ file.title }}</span>
+    </button>
+  </mat-menu>
 
   <div class="container">
     <div *ngIf="loading" class="loading">Loading minutes...</div>

@@ -29,6 +29,16 @@ export interface CommitteeReport {
   report: string;
 }
 
+export interface MinutesFile {
+  filename: string;
+  date: string;
+  title: string;
+}
+
+export interface MinutesIndex {
+  minutes: MinutesFile[];
+}
+
 export interface BoardMinutes {
   date: string;
   clubName: string;

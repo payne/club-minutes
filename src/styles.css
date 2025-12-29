@@ -13,12 +13,75 @@ html, body {
 
 body {
   background-color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-theme .minutes-content {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-theme mat-toolbar {
+  background-color: #1a237e !important;
+}
+
+body.dark-theme mat-expansion-panel {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-theme mat-expansion-panel-header {
+  background-color: #3d3d3d !important;
+  color: #e0e0e0;
+}
+
+body.dark-theme .mat-expansion-panel-body {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .loading,
+body.dark-theme .error {
+  color: #e0e0e0;
+}
+
+body.dark-theme .header {
+  border-bottom-color: #5c6bc0;
+}
+
+body.dark-theme .header h1 {
+  color: #7986cb;
+}
+
+body.dark-theme .header h2 {
+  color: #9e9e9e;
+}
+
+body.dark-theme table {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-theme th {
+  background-color: #3d3d3d !important;
+  color: #e0e0e0;
+}
+
+body.dark-theme td {
+  border-color: #444 !important;
 }
 
 /* Global Print Styles */
 @media print {
-  body {
-    background-color: white;
+  body,
+  body.dark-theme {
+    background-color: white !important;
+    color: black !important;
   }
 
   * {
@@ -58,5 +121,25 @@ body {
   /* Hide expansion indicators */
   .mat-expansion-indicator {
     display: none !important;
+  }
+
+  /* Override dark mode in print */
+  body.dark-theme .minutes-content,
+  body.dark-theme mat-expansion-panel,
+  body.dark-theme mat-expansion-panel-header,
+  body.dark-theme .mat-expansion-panel-body,
+  body.dark-theme table,
+  body.dark-theme th,
+  body.dark-theme td {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  body.dark-theme .header h1 {
+    color: #3f51b5 !important;
+  }
+
+  body.dark-theme .header h2 {
+    color: #666 !important;
   }
 }
