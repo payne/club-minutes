@@ -8,7 +8,24 @@
 
 .approval-info {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  .approval-info {
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .approval-info {
+    gap: 2rem;
+    font-size: 1rem;
+  }
 }
 
 @media print {

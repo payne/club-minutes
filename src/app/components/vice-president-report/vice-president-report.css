@@ -5,6 +5,19 @@
 .report-text {
   line-height: 1.6;
   margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .report-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .report-text {
+    font-size: 1rem;
+  }
 }
 
 @media print {

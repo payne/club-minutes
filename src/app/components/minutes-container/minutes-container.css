@@ -10,14 +10,14 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .loading,
 .error {
   text-align: center;
-  padding: 3rem;
-  font-size: 1.2rem;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
 }
 
 .error {
@@ -26,38 +26,137 @@
 
 .minutes-content {
   background: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Tablet styles */
+@media (min-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .minutes-content {
+    padding: 1.5rem;
+  }
+
+  .loading,
+  .error {
+    padding: 2.5rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .minutes-content {
+    padding: 2rem;
+  }
+
+  .loading,
+  .error {
+    padding: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
 .header {
   text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
   border-bottom: 2px solid #3f51b5;
 }
 
 .header h1 {
   margin: 0 0 0.5rem 0;
   color: #3f51b5;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .header h2 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #666;
 }
 
 .header .date {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #999;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .header h2 {
+    font-size: 1.35rem;
+  }
+
+  .header .date {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .header .date {
+    font-size: 1.1rem;
+  }
 }
 
 .print-only {
   display: none;
+}
+
+.toolbar-title {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-only {
+  display: inline-block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .toolbar-title {
+    font-size: 1.25rem;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: inline-block;
+  }
 }
 
 mat-accordion {

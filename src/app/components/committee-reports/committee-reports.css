@@ -9,11 +9,35 @@
 .committee-accordion mat-panel-description {
   font-style: italic;
   color: #666;
+  font-size: 0.85rem;
 }
 
 .report-text {
   margin: 0;
   line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .committee-accordion mat-panel-description {
+    font-size: 0.9rem;
+  }
+
+  .report-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .committee-accordion mat-panel-description {
+    font-size: 1rem;
+  }
+
+  .report-text {
+    font-size: 1rem;
+  }
 }
 
 @media print {

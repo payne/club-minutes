@@ -9,11 +9,33 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 16px;
 }
 
 body {
   background-color: #f5f5f5;
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Touch-friendly tap targets for mobile */
+button,
+a,
+.mat-menu-item {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Responsive expansion panels */
+mat-expansion-panel-header {
+  padding: 0.75rem 1rem !important;
+}
+
+@media (min-width: 768px) {
+  mat-expansion-panel-header {
+    padding: 1rem 1.5rem !important;
+  }
 }
 
 /* Dark Mode Styles */

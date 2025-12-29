@@ -112,7 +112,8 @@ export class MinutesContainer implements OnInit {
 
   openAboutDialog() {
     this.dialog.open(AboutDialog, {
-      width: '400px'
+      width: '90vw',
+      maxWidth: '400px'
     });
   }
 
