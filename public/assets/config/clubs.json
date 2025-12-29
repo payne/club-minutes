@@ -1,6 +1,11 @@
 {
   "clubs": [
     {
+      "id": "AARC",
+      "name": "Aksarben Amateur Radio Club",
+      "minutesIndexUrl": "https://raw.githubusercontent.com/payne/aarc-minutes/refs/heads/main/index.json"
+    },
+    {
       "id": "example-arc",
       "name": "Example Amateur Radio Club",
       "minutesIndexUrl": "assets/data/example-arc/index.json"
