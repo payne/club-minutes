@@ -292,3 +292,17 @@ Right now there are only board minutes.  Add support for meeting minutes.
 
 **Claude response completed at 2025-12-29 09:13:42**
 
+
+### User Prompt (2025-12-29 09:16:28)
+
+The header should show the name of the club, type of minutes, and date of meeting.
+
+**Claude response completed at 2025-12-29 09:16:46**
+
+
+### User Prompt (2025-12-29 09:17:44)
+
+The header to the right of the hamburger menu should display the club name, type of minutes, and date of the meeting.
+
+**Claude response completed at 2025-12-29 09:18:01**
+
