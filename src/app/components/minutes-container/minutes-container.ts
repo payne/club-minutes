@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatExpansionModule, MatAccordion } from '@angular/material/expansion';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -48,6 +48,8 @@ import { AboutDialog } from '../about-dialog/about-dialog';
   styleUrl: './minutes-container.css',
 })
 export class MinutesContainer implements OnInit {
+  @ViewChild(MatAccordion) accordion!: MatAccordion;
+
   minutes?: BoardMinutes;
   loading = true;
   error = false;
@@ -61,6 +63,8 @@ export class MinutesContainer implements OnInit {
 
   expandedPanels: Set<string> = new Set();
   private isRestoringState = false;
+  private isTogglingAll = false;
+  allExpanded = false;
 
   constructor(
     private minutesData: MinutesData,
@@ -217,11 +221,41 @@ export class MinutesContainer implements OnInit {
     } else {
       this.expandedPanels.delete(panelId);
     }
+
+    // Update allExpanded flag based on current state (but not during bulk toggle operations)
+    if (!this.isTogglingAll) {
+      const allPanels = ['attendance', 'financial', 'approval', 'president', 'vicepresident', 'committees', 'oldbusiness', 'newbusiness', 'announcements'];
+      this.allExpanded = allPanels.every(panel => this.expandedPanels.has(panel));
+    }
+
     this.updateUrl();
   }
 
   isPanelExpanded(panelId: string): boolean {
     return this.expandedPanels.has(panelId);
+  }
+
+  toggleExpandAll() {
+    this.isTogglingAll = true;
+
+    if (this.allExpanded) {
+      // Collapse all
+      this.accordion.closeAll();
+      this.expandedPanels = new Set();
+      this.allExpanded = false;
+    } else {
+      // Expand all
+      this.accordion.openAll();
+      const allPanels = ['attendance', 'financial', 'approval', 'president', 'vicepresident', 'committees', 'oldbusiness', 'newbusiness', 'announcements'];
+      this.expandedPanels = new Set(allPanels);
+      this.allExpanded = true;
+    }
+    this.updateUrl();
+
+    // Reset flag after a short delay to allow panel events to complete
+    setTimeout(() => {
+      this.isTogglingAll = false;
+    }, 100);
   }
 
   toggleDarkMode() {

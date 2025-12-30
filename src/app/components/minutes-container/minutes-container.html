@@ -19,6 +19,13 @@
       <mat-icon>print</mat-icon>
       Print
     </button>
+    <button mat-icon-button (click)="toggleExpandAll()" *ngIf="!loading && !error" class="mobile-only" [title]="allExpanded ? 'Collapse All' : 'Expand All'">
+      <mat-icon>{{ allExpanded ? 'unfold_less' : 'unfold_more' }}</mat-icon>
+    </button>
+    <button mat-raised-button (click)="toggleExpandAll()" *ngIf="!loading && !error" class="desktop-only">
+      <mat-icon>{{ allExpanded ? 'unfold_less' : 'unfold_more' }}</mat-icon>
+      {{ allExpanded ? 'Collapse All' : 'Expand All' }}
+    </button>
   </mat-toolbar>
 
   <mat-menu #menu="matMenu">
@@ -89,7 +96,7 @@
         <p class="date">{{ minutes.date | date:'fullDate' }}</p>
       </div>
 
-      <mat-accordion>
+      <mat-accordion multi="true">
         <mat-expansion-panel [expanded]="isPanelExpanded('attendance')" (opened)="onPanelToggle('attendance', true)" (closed)="onPanelToggle('attendance', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>Attendance</mat-panel-title>
