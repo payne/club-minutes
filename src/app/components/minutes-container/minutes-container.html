@@ -118,6 +118,13 @@
           <app-minutes-approval [approval]="minutes.minutesApproval"></app-minutes-approval>
         </mat-expansion-panel>
 
+        <mat-expansion-panel [expanded]="isPanelExpanded('secretary')" (opened)="onPanelToggle('president', true)" (closed)="onPanelToggle('secretary', false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Secretary's Report</mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-president-report [report]="minutes.secretaryReport"></app-president-report>
+        </mat-expansion-panel>
+
         <mat-expansion-panel [expanded]="isPanelExpanded('president')" (opened)="onPanelToggle('president', true)" (closed)="onPanelToggle('president', false)">
           <mat-expansion-panel-header>
             <mat-panel-title>President's Report</mat-panel-title>

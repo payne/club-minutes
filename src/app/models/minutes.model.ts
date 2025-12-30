@@ -57,6 +57,7 @@ export interface BoardMinutes {
   attendees: Attendee[];
   financialReport: FinancialReport;
   minutesApproval: MinutesApproval;
+  secretaryReport: string[];
   presidentReport: string[];
   vicePresidentReport: string[];
   committeeReports: CommitteeReport[];
